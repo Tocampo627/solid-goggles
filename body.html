@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Rock Paper Scissors</title>
+  </head>
+  <!-- body   -->
+  <body>
+    <!-- header -->
+    <header class="title center-align uppercase bold underline lucid-font">
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <!-- score keeper section -->
+    <div class="score-keeper bold lucid-font">
+      <div id="user-score">
+        Your Score:<span id="user-score-change"> 0</span>
+      </div>
+      <div id="computer-score">
+        Computer's Score:<span id="computer-score-change"> 0</span>
+      </div>
+      <div id="max-round">
+        Round Number: <span id="round-change"> 0 </span> of
+        <span id="max-rounds">MAX</span>
+      </div>
+      <div id="match-winner">
+        Match Winner:
+        <div id="results-change"><span class="bold underline"></span></div>
+      </div>
+    </div>
+
+    <!-- user container -->
+    <!-- <div id="entire-body"> -->
+    <div id="username">
+      <h2 class="center-align">You</h2>
+    </div>
+    <div id="pick-your-move">
+      <h4 class="center-align">Pick Your Move:</h4>
+      <div id="images" class="center-align">
+        <!-- ROCK CONATINER -->
+        <div id="rock">
+          <input
+            type="image"
+            name="Rock"
+            id="rock-image"
+            class="choices"
+            onclick="rock()"
+            src="https://lh3.googleusercontent.com/fMNDd7zHDqSTLhVNOQFCqJ3C1T0f9xL1BBJfgnT4MUWlKuzC1pxW3ZOBZWsMwhpmdP-76P0ud6oMoUhcsdVC-fOrPKs7hNQPNgSVcAotIBsjXq_pzU4wx8WeLhhqmoMIOwpPMOrqVQ=w2400"
+            width="100"
+            height="100"
+          />
+        </div>
+
+        <!-- PAPER CONATINER -->
+        <div id="paper">
+          <input
+            type="image"
+            name="Paper"
+            id="paper-image"
+            class="choices"
+            onclick="paper()"
+            src="https://lh3.googleusercontent.com/L0TTaT6G1jJ9DQN-Tj4RKyroxzX3DmV3oxUdaALSdmtUldGzTfD8Gt--yN1j-HwqByAj7vFwXBvtIjKvC4MBAP7cNiPhzWoZCrnHhij9zRJ20m52tDwumtITppscTSj1kPDGNSRnUw=w2400"
+            width="100"
+            height="100"
+          />
+        </div>
+        <!-- SCISSORS CONTAINER -->
+        <div id="scissors">
+          <input
+            type="image"
+            name="Scissors"
+            id="scissors-image"
+            class="choices"
+            onclick="scissors()"
+            src="https://lh3.googleusercontent.com/Hx1AgXsyhAMYUk-DE61Poacem545PUdXT2VzmX6wkvYgQV2ss759HNjr738TZVDB1OQH1c0oDLKeLOJ2q7xNjTtZizhxyk6TiprOxrMrqI46e6YhH-LigwvbjscELSXIQUu4PwWQ_w=w2400"
+            width="100"
+            height="100"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- VS container -->
+    <div id="vs">
+      <h2 class="center-align">v.s</h2>
+    </div>
+    <div id="results" class="uppercase center-align bold underline">
+      Results:
+    </div>
+    <div id="winner" class="uppercase center-align bold underline">
+      Winner of the Round:
+      <div id="winner-changer">
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Computer container -->
+    <div id="computer">
+      <h2 class="center-align">COMPUTER</h2>
+    </div>
+    <div id="computer-guess-image" class="center-align">
+      <input
+        id="computer-guess"
+        type="image"
+        name="computerImage"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEWAgIB7e3vCwsLIyMjPz8/V1dV4eHjc3Nzj4+PMzMzt7e1zc3O/v7/////39/fx8fHg4ODJbms7AAABaElEQVR4nO3dSWrDABBFQcm2PMkZ7n/aaJFNiCEmZOBJVSf4b9/Qw9Pzy/V8Pp8W0+Lw7rL/YPd9+y9dDo+YHnH65DpM8/Ge8S/dXfAz5tswHYc1G3cK65bCg8I2hX0K+xT2KexT2LcUXsb/HvGrlsK9wjaFfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9h3yYKdwrbFPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8I+hX0K+xT2KexT2LeJiyGFcQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8I+hX0K+xT2baJw/T9K1v9nRmGcwj6FfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insE9hn8K+pXBS2KawT2Gfwj6FfQr7FPYp7FPYp7BPYZ/CPoV9CvsU9insU9insG8ThSeFbQr7FPYp7FPYp7BPYZ/Cvm0UzuOazbfhetut2e31DZx9EnazzT4gAAAAAElFTkSuQmCC"
+        width="200"
+        height="200"
+      />
+    </div>
+    <!-- </div> -->
+    <div id="reset">
+      <img
+        type="image"
+        class="choices center-align"
+        value="RESET"
+        onclick="reset()"
+        src="https://lh3.googleusercontent.com/rbbGB_nDxDFoxYMpKkV6oStd8WTU7aeCBMJTYKXuvFCM3NcLxKLVmyezHO-9dju_vICEefwqFoOpqXVXJVshyoAdNTxC_famX_4032cfjjOk-VmV7D6ieXuAsW5OsrekJMEYH6O4Vw=w2400
+        "
+        width="100"
+        height="100"
+      />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

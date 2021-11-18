@@ -1,0 +1,103 @@
+body {
+  background-color: #8fbef7af;
+}
+.lucid-font {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* multiple items selectors */
+.center-align {
+  text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.underline {
+  text-decoration: underline;
+}
+.bold {
+  font-weight: bold;
+}
+/* SCORE KEEPER */
+.score-keeper {
+  text-align: center;
+}
+
+/* USER CONATINER */
+div#username {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  top: 0px;
+  right: 0px;
+}
+div#pick-your-move {
+  position: relative;
+  width: 200px;
+  top: 0px;
+  right: 0px;
+}
+
+.choices {
+  border: 2px solid #466995;
+  margin: 10px;
+}
+.choices:hover {
+  background-color: lightslategray;
+}
+/* VS CONATINER */
+div#vs {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  bottom: 515px;
+  left: 400px;
+}
+div#results {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  bottom: 450px;
+  left: 400px;
+}
+
+div#winner {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  bottom: 450px;
+  left: 400px;
+}
+div#winner-changer {
+  font-size: 20px;
+}
+/* COMPUTER CONATINER */
+div#computer {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  bottom: 785px;
+  left: 800px;
+}
+/* Reset CONATINER */
+div#reset {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  bottom: 650px;
+  left: 450px;
+  width: 120px;
+  height: 120px;
+}
+
+div#computer-guess-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  bottom: 600px;
+  left: 800px;
+}
+div#results-change {
+  background-color: rgb(255, 0, 0);
+
+  font-size: 60px;
+}
